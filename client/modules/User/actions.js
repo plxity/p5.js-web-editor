@@ -211,6 +211,7 @@ export function updateSettings(formValues) {
       .then((response) => {
         dispatch(updateSettingsSuccess(response.data));
         browserHistory.push('/');
+        alert('Settings Saved Succesfully');
       })
       .catch(response => Promise.reject(new Error(response.data.error)));
 }
